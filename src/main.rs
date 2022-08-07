@@ -5,6 +5,7 @@ use clap::Parser;
 #[derive(Parser)]
 struct Cli {
     currency: currency::Currency,
+    amount: Option<f32>,
 }
 
 fn main() {
@@ -20,4 +21,8 @@ fn main() {
 
     let rate = nbu_api::get_rate(args.currency);
     println!("{:?}", rate);
+
+    if let Some(amount) = args.amount {
+        println!("= {:.2} UAH", amount * rate);
+    }
 }
