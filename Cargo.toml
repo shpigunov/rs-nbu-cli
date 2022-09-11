@@ -18,3 +18,5 @@ strip = true      # Automatically strip symbols from the binary.
 clap = { version = "*", features = ["derive"] }
 reqwest = { version = "*", features = ["blocking", "json"] }
 serde = { version = "*", features = ["derive"] }
+strum = { version = "0.24", features = ["derive"] }
+strum_macros = "0.24"
