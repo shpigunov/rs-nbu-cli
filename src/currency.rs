@@ -3,8 +3,12 @@ use strum_macros::EnumString;
 
 #[derive(PartialEq, Eq, Debug, EnumString, Display)]
 pub enum Currency {
-    #[strum(serialize = "EUR")]
+    #[strum(serialize = "EUR", serialize = "eur")]
     Eur,
-    #[strum(serialize = "USD")]
+    #[strum(serialize = "USD", serialize = "usd")]
     Usd,
+    #[strum(serialize = "GBP", serialize = "gbp")]
+    Gbp,
+    #[strum(serialize = "JPY", serialize = "jpy")]
+    Jpy,
 }
